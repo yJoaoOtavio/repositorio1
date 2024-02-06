@@ -13,21 +13,40 @@ print((5+8+12)/3)
 numeroint = int(input("digite um numero inteiro"))
 print(numeroint)
 #5. Faça um programa que leia dois números reais e os imprima.
-numerofloat = float(input("digite um numero real"))
+numero1 = float(input("digite um numero real:"))
+numero2 = float(input("digite outro numero real:"))
+print(numero1)
+print(numero2)
+
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
-  
+numero = int(input('digite um numero inteiro'))
+print(f'sucessor: {numero+1}') 
+print(f'antecessor: {numero-1}') 
+
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+nome = input('digite o seu nome:')
+print(nome)
+endereço = input('insia o seu endereço:')
+print(endereço)
+numerotelefone = input('insira o seu numero de telefone:')
+print(numerotelefone)
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+numero1 = int(input('insira um numero inteiro'))
+numero2 = int(input('insira outro inteiro'))
+print(numero1-numero2)
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
+numero = float(input('digite um numero real'))
+print (numero/4)
 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
