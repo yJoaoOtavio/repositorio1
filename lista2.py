@@ -72,20 +72,64 @@ def q06():
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def q07():
 
-
+    num = int(input('insira um numero inteiro'))
+    if num > 20 and num <50:
+        print (f"{num} é compreendido")
+    else:
+        print (f'{num} não é compreendido')
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q08():
+
+    num = int(input("insira um numero inteiro:"))
+    if num > 20 :
+        print (" numero é maior que 20")
+    elif num == 20:
+        print ("numero igual a 20")
+    else:
+        print ('numero Menor que 20') 
+       
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q09():
+
+    anonascimento = int(input('insira seu ano de nascimento:'))
+    anoatual = 2024
+    if num > 2024:
+     print ("o ano inserido é invalido!")
+    else:
+        print (f'Sua idade é:{anoatual - num}')
+
+
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+
+    a = int(input('1 numero:'))
+    b = int(input('1 numero:'))
+    c = int(input('1 numero:'))
+    if a<b and b<c:
+        print (f'{a}, {b}, {c}')
+    if a<b and b<c:
+        print (f'{a}, {c}, {b}')
+    if a<b and b<c:
+        print (f'{b}, {a}, {c}')        
+    if a<b and b<c:
+        print (f'{a}, {b}, {c}')
+    if a<b and b<c:
+        print (f'{a}, {b}, {c}') 
+    if a<b and b<c:
+        print (f'{a}, {b}, {c}')   
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+
+
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
@@ -177,12 +221,41 @@ def q06():
 #Peixe 230cal   Sorvete diet 110cal Suco de laranja 70cal
 #Frango 250cal  Mousse diet 170cal  Suco de melão 100cal
 #Carne 350cal   Mousse chocolate 200cal Refrigerante diet 65cal
+def q23():
+    prato = input('prato: ').upper().strip()
+    sobremesa = input('sobremesa: ').upper().strip()
+    bebida = input('bebida: ').upper().strip()
+
+    total = 0
+    total += 180 if prato == 'VEGETARIANO' else 0
+    total += 230 if prato == 'PEIXE' else 0
+    total += 250 if prato == 'FRANGO' else 0
+    total += 350 if prato == 'CARNE' else 0
+    total += 75 if sobremesa == 'ABACAXI' else 0
+    total += 110 if sobremesa == 'SORVETE DIET' else 0
+    total += 170 if sobremesa == 'MOUSSE DIET' else 0
+    total += 200 if sobremesa == 'SORVETE DE CHOCOLATE' else 0
+    total += 20 if bebida == 'CHA' else 0  
+    total += 70 if bebida == 'SUCO DE LARANJA' else 0  
+    total += 100 if bebida == 'SUCO DE MELAO' else 0  
+    total += 65 if bebida == 'REFRIGERANTE' else 0  
+
+    print (f'total de calorias:{total}')
 
 #24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para
 #cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do
 #carro deve ser renovado é determinado pelo último número da placa do mesmo,
 #faça um programa que, a partir da leitura da placa do carro, informe o mês
 #em que o emplacamento deve ser renovado.
+def q24():
+
+    placa = input('placa do veiculo: ').upper().strip()
+    mes = placa[len(placa)-1]
+    if placa = 1:
+        print('janeiro')
+    elif placa = 2 fevereiro
+    print ('')    
+
 
 #25. A prefeitura contratou uma firma especializada para manter os níveis de
 #poluição considerados ideais para um país do 1º mundo. As indústrias,
@@ -203,4 +276,10 @@ match opcao:
     case 4: q04()
     case 5: q05()
     case 6: q06()
+    case 7: q07()
+    case 8: q08()
+    case 9: q09()
+    case 10: q10()
+    case 23: q23()
+    case 24: q24()
     case _: print('Opção Inválida!')
