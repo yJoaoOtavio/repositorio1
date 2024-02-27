@@ -116,31 +116,67 @@ def q10():
     c = int(input('1 numero:'))
     if a<b and b<c:
         print (f'{a}, {b}, {c}')
-    if a<b and b<c:
+    if a<c and c<b:
         print (f'{a}, {c}, {b}')
-    if a<b and b<c:
+    if b<a and a<c:
         print (f'{b}, {a}, {c}')        
-    if a<b and b<c:
-        print (f'{a}, {b}, {c}')
-    if a<b and b<c:
-        print (f'{a}, {b}, {c}') 
-    if a<b and b<c:
+    if b<c and c<a:
+        print (f'{b}, {c}, {a}')
+    if c<b and b<a:
+        print (f'{c}, {b}, {a}') 
+    if c<a and a<b:
         print (f'{a}, {b}, {c}')   
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
 
+    num1 = int(input('Primeiro numero: '))
+    num2  = int(input('Segundo numero : '))
+    num3 = int(input('Terceiro numero: '))
+    maior = num1
+
+    if (num2 > maior):
+        maior = num2
+    if (num3 > maior):
+        maior = num3
+
+    print('Maior: ',maior)
 
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idadea
 #• Se é maior de 65 anos
+def q12():
+
+    idade = int(input('insira sua idade'))
+
+    if idade >= 18 and idade < 65:
+        print ('Maior de idade')
+    elif idade < 18:
+        print ('menor de idade')
+    elif idade > 65:
+        print('Maior de 65')        
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def q13():
+
+    nome = input('insira seu nome')
+    prova1 = float(input('insira a nota da prova 1 '))
+    prova2= float(input('insira a nota da prova 2 '))
+    media = (prova1 + prova2)/2
+
+    if media >= 7:
+        print(f'{nome} aprovado')
+    elif media < 3:
+        print(f'{nome} Reprovado')
+    elif media >= 3 and media <7:
+        print(f'{nome} Prova final')    
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -149,10 +185,35 @@ def q10():
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+def q14():
+
+    salario = float(input('insira seu o valor de seus salario: '))
+
+    if salario <= 600:
+        print('insento.')
+    elif salario > 600 and salario <= 1200 :
+        print (f'o desconto será: {(20*salario)/100}')    
+    elif salario > 1200 and salario <= 2000 :
+        print (f'o desconto será:{(25*salario)/100}') 
+    elif salario > 2000 :
+        print(f'o desconto será:{(30*salario)/100}')       
+
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
+def q15():
+
+    valorproduto = float(input('insira o valor do produto'))
+    valormenor = (30*valorproduto)/100
+    valormaior = (45*valorproduto)/100
+
+    if valorproduto < 20: 
+       print (f'O valor da Venda será: {valorproduto+valormaior}') 
+    elif valorproduto >= 20:
+       print (f'O valor da Venda será: {valorproduto+valormenor}')  
+
+
 
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
@@ -163,6 +224,8 @@ def q10():
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+
+
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
@@ -251,10 +314,30 @@ def q24():
 
     placa = input('placa do veiculo: ').upper().strip()
     mes = placa[len(placa)-1]
-    if placa = 1:
+    if placa == 1:
         print('janeiro')
-    elif placa = 2 fevereiro
-    print ('')    
+    elif placa == 2:
+        print ('fevereiro')
+    elif placa == 3:
+        print ("março")
+    elif placa == 4:
+        print ('abril') 
+    elif placa == 5:
+        print ('maio')
+    elif placa == 6:
+        print ('junho')
+    elif placa == 7:
+        print("julho")
+    elif placa == 8:
+        print ('agosto')
+    elif placa == 9:
+        print('setembro')
+    elif placa == 10:
+        print('outubro')
+    elif placa == 11:
+        print('novembro')
+    elif placa == 12:
+        print('dezembro')                                  
 
 
 #25. A prefeitura contratou uma firma especializada para manter os níveis de
@@ -280,6 +363,11 @@ match opcao:
     case 8: q08()
     case 9: q09()
     case 10: q10()
+    case 11: q11()
+    case 12: q12()
+    case 13: q13()
+    case 14: q14()
+    case 15: q15()
     case 23: q23()
     case 24: q24()
     case _: print('Opção Inválida!')
