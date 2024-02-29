@@ -3,29 +3,61 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
 #1.Faça um programa que imprima todos os números de 1 até 100.
+def q01():
+
+    for x in range(1,101):
+        print(x, end = " ")
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
+def q02():
+
+    for x in range (100,0,-2):
+       print(x, end =" ")
+
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
+def q03():
+
+    for x in range (1,501):
+       if x % 5 == 0:
+         print (x, end = " ")
+
 
 #4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
+def q04():
+
+    for x in range(3):
+        nome = input('insira um nome: ')
+        idade = input('insira uma idade')
+        sexo = input('insira um sexo')
+
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
+
+
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 #a partir da soma dos anteriores. Exemplo:
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
+def q06():
 
+    x = 0 
+    while x <20:
+     print (f'1 + {x} = {1 + x}  {x+2}° termo')
+     x += 1
+    
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+
+
 
 #8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
@@ -259,3 +291,10 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
+
+opcao = int(input('Questão a ser executada: '))
+match opcao:
+    case 1: q01()
+    case 2: q02()
+    case 3: q03()
+    case 6: q06()

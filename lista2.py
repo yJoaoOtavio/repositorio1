@@ -224,8 +224,20 @@ def q15():
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+def q16():
 
+    idade = int(input('insira a idade do competidor: '))
 
+    if idade >= 5 and idade <=7 :
+        print ("competindo na infantil A")
+    elif idade >= 8 and idade <= 10 :
+        print ("competindo na infantil B")
+    elif idade >= 11 and idade <=13 :
+        print ("competindo na juvenil A")
+    elif idade >= 14 and idade <= 17 :
+        print ("competindo na juvenil B")
+    elif idade >= 18 :
+        print ("competindo na Sênior")
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
@@ -368,6 +380,7 @@ match opcao:
     case 13: q13()
     case 14: q14()
     case 15: q15()
+    case 16: q16()
     case 23: q23()
     case 24: q24()
     case _: print('Opção Inválida!')
