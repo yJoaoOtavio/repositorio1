@@ -28,17 +28,27 @@ def q03():
 #e tiver mais de 21 anos.
 def q04():
 
-    for x in range(3):
-        nome = input('insira um nome: ')
-        idade = input('insira uma idade')
-        sexo = input('insira um sexo')
+    for x in range(1,21):
+    
+        nome = (input('insira um nome: '))
+        idade = int(input('insira idade: '))
+        sexo = (input('sexo: ')) 
+        if idade >= 21 and sexo == "M" :
+         print (nome) 
+
 
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
-
-
+def q05():
+    soma = 0
+    num1 = int(input('numero 1 '))
+    num2 = int(input('numero 2 '))
+    #5*4=20 (4+4+4+4+4)
+    for x in range(num1):
+     soma += num2
+    print(f'{num1}*{num2}={soma}')
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
@@ -47,17 +57,29 @@ def q04():
 #• 1 + 2 = 3, quarto termo, etc.
 def q06():
 
-    x = 0 
-    while x <20:
-     print (f'1 + {x} = {1 + x}  {x+2}° termo')
-     x += 1
-    
+    anterior = 0
+    atual = 1
+    print(atual, end =" ")
+    for x in range(19):
+        proximo = anterior + atual
+        print(proximo, end = " ")
+        anterior = atual
+        atual = proximo 
+
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
-
-
+def q07():
+    somamedia = 0
+    for x in range(3):
+        nome = input('insira o nome do aluno ')
+        nota1 = float(input('insira a nota da prova 1 '))
+        nota2 = float(input('insira a nota da prova 2 '))
+        media = (nota1+nota2)/2
+        somamedia += media
+        print(f'{nome}, {nota1}, {nota2} a media desse aluno é {media}')
+    print(somamedia/3)
 
 #8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
@@ -76,6 +98,24 @@ def q06():
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
+def q09():
+    qtdepessoasexelente = 0
+    somaidadeexelente = 0
+    qtdepessoasregular = 0
+    qtdepessoasbom = 0
+    for x in range(20):
+        idade = int(input('idade: '))
+        opniao = int(input('opniao ([3]-Exelente - [2]-Bom - [1]Regular): '))
+        match(opiniao):
+            case 1: qtdepessoasregular += 1
+            case 2: qtdepessoasbom += 1
+            case 3:
+                qtdepessoasexelente +=1
+                somaidadeexelente += idade
+            case _: print('opção invalida!')
+    print(f'Media idade exelente: {somaidadeexelente/qtdepessoasexelente}')
+    print(f'quantidade de pessoas regualar: {qtdepessoasregular}')
+    print(f'% de pessoas que responderam bom: {qtdepessoasbom/20*100}%-')
 
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
@@ -297,4 +337,8 @@ match opcao:
     case 1: q01()
     case 2: q02()
     case 3: q03()
+    case 4: q04()
+    case 5: q05()
     case 6: q06()
+    case 7: q07()
+    case 9: q09()
