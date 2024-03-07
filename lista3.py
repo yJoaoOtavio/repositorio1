@@ -72,7 +72,7 @@ def q06():
 #imprimir a média geral da turma.
 def q07():
     somamedia = 0
-    for x in range(3):
+    for x in range(15):
         nome = input('insira o nome do aluno ')
         nota1 = float(input('insira a nota da prova 1 '))
         nota2 = float(input('insira a nota da prova 2 '))
@@ -81,13 +81,24 @@ def q07():
         print(f'{nome}, {nota1}, {nota2} a media desse aluno é {media}')
     print(somamedia/3)
 
-#8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
+#8. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
 #calculado conforme a tabela a seguir:
 #Salário IRRF
 #Salário menor que R$1300,00 Isento
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
+def q08():
+
+    for x in range(10):
+        nome = input('insira nome: ')
+        salario = float(input('insira salario: '))
+        if salario < 1300 :
+            print(f'{nome} insento de impostos')
+        elif salario >= 1300 and salario < 2300 :
+            print(f'{nome} 10% do salario bruto no valor de {(salario*10)/100}')
+        elif salario >= 2300:
+            print(f'{nome} 15% do salario bruto no valor de {(salario*15)/100}')       
 
 #9. No dia da estréia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
@@ -125,10 +136,31 @@ def q09():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
+   # mediapesototal = 0
+   # mediaidadetotal = 0
+   # for x in range(2):
+        #pais = input('insira um pais: ')
+
+        
+        #for x in range(2):
+           # jogadornum = input('enumere o jogador: ')
+          #  pesojogador = float(input('insira peso: '))
+         #   idadejogador = input('insira idade: ')
+        #print(f'teste')    
+           
+
+
     
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
+#def q11():
+   # começo = 100
+
+    #while contador < 5:
+    # print(f'Valor do contador é {contador}')
+     #contador += 1
+
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
@@ -341,4 +373,9 @@ match opcao:
     case 5: q05()
     case 6: q06()
     case 7: q07()
+    case 8: q08()
     case 9: q09()
+    case 10: q10()
+    case 11: q11()
+
+    
