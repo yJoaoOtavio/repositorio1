@@ -154,18 +154,26 @@ def q09():
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
-#def q11():
-   # começo = 100
+def q11():
+    contador = 0
+    numero = 1
 
-    #while contador < 5:
-    # print(f'Valor do contador é {contador}')
-     #contador += 1
+    while numero != 0:
+     numero = int(input('insira um numero: '))
+     if numero >= 100 and numero <= 200 :
+        contador += 1
+    print(contador)
 
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
+def q12():
+    contador = 0
+    while contador < 10:
+        
+        
 
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
@@ -377,5 +385,6 @@ match opcao:
     case 9: q09()
     case 10: q10()
     case 11: q11()
+    case 12: q12()
 
     
