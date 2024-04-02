@@ -169,9 +169,9 @@ def q11():
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
-def q12():
-    contador = 0
-    while contador < 10:
+#def q12():
+    #contador = 0
+    #while contador < 10:
         
         
 
@@ -191,6 +191,17 @@ def q12():
 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
+def q14():
+    numero = int(input("Fatorial de: ") )
+
+    resultado=1
+    if numero == 1 :
+        print("valor invalido")   
+
+    for x in range(1,numero+1):
+        resultado *= x
+
+     print(resultado)
 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
@@ -386,5 +397,6 @@ match opcao:
     case 10: q10()
     case 11: q11()
     case 12: q12()
+    case 14: q14()
 
     
