@@ -192,16 +192,18 @@ def q11():
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 def q14():
-    numero = int(input("Fatorial de: ") )
+    numero = 1
+    while numero !=0 :
+        numero = int(input("Fatorial de: ") )
 
-    resultado=1
-    if numero == 1 :
-        print("valor invalido")   
+        resultado=1      
+        for x in range(1,numero+1):
+            resultado *= x
+        if numero == 0 :
+            print("numero invalido")
+        elif numero >=1 :
 
-    for x in range(1,numero+1):
-        resultado *= x
-
-     print(resultado)
+         print(resultado)
 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
