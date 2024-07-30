@@ -7,15 +7,44 @@ Lista de Exercícios referentes a coleções em python
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
 #for encontrado o programa deve imprimir a posição desse número na lista, caso
 #contrário, deve imprimir a mensagem: "Nao encontrado!".
+def q01():
+
+    lista = []
+    for x in range(15):
+        lista.append(random.randrange(100))
+    print(lista)
+    busca = int(input('digite um numero a ser localizado: '))
+    try:
+         posição = lista.index(busca)
+         print(f'posição do numero {busca}: {posição}')
+    except ValueError:
+         print(f'Valor {busca} não existe na lista!')
+
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
 #numerada.
+def q02():
+    lista = []
+    i = 0 
+    for x in range(10):
+        lista.append(chr(random.randrange(65,91)))
+        print(f'{i}: {lista[i]}')
+        i+=1
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
+def q03():
+    lista = []
+    i = 0 
+    for x in range(10):
+        lista.append(int(random.randrange(100)))
+        print(f'{i}: {lista[i]}')
+        i+=1
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
+
+
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
@@ -95,3 +124,9 @@ Lista de Exercícios referentes a coleções em python
 
 #20. Faça um programa que leia a matrícula e a média de 100 alunos. Ordene da maior
 #para a menor nota e imprima uma relação contendo todas as matrículas e médias.
+
+opcao = int(input('Questão a ser executada: '))
+match opcao:
+    case 1: q01()
+    case 2: q02()
+    case 3: q03()
