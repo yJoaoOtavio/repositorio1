@@ -37,20 +37,33 @@ def q03():
     lista = []
     i = 0 
     for x in range(10):
-        lista.append(int(random.randrange(100)))
-        print(f'{i}: {lista[i]}')
+        lista.append(random.randrange(100))
+        if lista[i] % 2 == 0 :
+            print(f'{lista[i]} é par')
+        else :
+            print(f'{lista[i]} é impar')
         i+=1
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
-
-
+def q04():
+     lista = [] 
+     i=0
+     for x in range(8):
+        lista.append(random.randrange(100))
+        if lista[i] % 6 == 0 :
+            print(f'{lista[i]} é muiltiplo de seis ')
+        else :
+            print ("|")    
+        i+=1
+            
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
+
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
@@ -130,3 +143,4 @@ match opcao:
     case 1: q01()
     case 2: q02()
     case 3: q03()
+    case 4: q04()
