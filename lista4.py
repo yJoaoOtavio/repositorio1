@@ -36,7 +36,7 @@ def q02():
 def q03():
     lista = []
     i = 0 
-    for x in range(10):
+    for x in range(15):
         lista.append(random.randrange(100))
         if lista[i] % 2 == 0 :
             print(f'{lista[i]} é par')
@@ -47,14 +47,12 @@ def q03():
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
 def q04():
-     lista = [] 
-     i=0
-     for x in range(8):
+     lista = []
+     for x in range(15):
         lista.append(random.randrange(100))
-        if lista[i] % 6 == 0 :
-            print(f'{lista[i]} é muiltiplo de seis ')
-        else :
-            print ("|")    
+        i = 0
+     for n in lista:
+        print(f'{i+1}: {n} é {"MULTIPLO DE 6!" if n%6==0 else "INVALIDO!"}')
         i+=1
             
 
@@ -64,11 +62,39 @@ def q04():
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
 
+def q05():
+    alunos = []
+    for x in range (3):
+        aluno = dict()
+        aluno['nome'] = input('nome: ')
+        aluno['n1'] = float(input('nota 1: '))
+        aluno['n2'] = float(input('nota 2: '))
+        aluno['media'] = (aluno['n1'] + aluno['n2']) / 2
+        aluno ['situacao'] = 'APROVADO' if aluno['media']>=6 else 'REPROVADO'
+        alunos.append(aluno)
+    print('NOME\tN1\tN2\tMEDIA\tSITUACAO')
+    for a in alunos:
+        print(f'{a["nome"]}\t{a["n1"]}\t{a["n2"]}\t{a["situacao"]}')    
+        
+
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
+def q06():
+    T = []
+    for x in range (20):
+        Tra = dict()
+        Tra['num'] = input('numeração: ')
+        Tra['sa'] = float(input('Salario Antigo: '))
+        Tra['reajuste'] = (Tra['sa']*8)/100
+        Tra['novo salario'] = (Tra['sa'] + Tra['reajuste'])
+        T.append(Tra)
+    print('num\tsa\treajuste\tnovo salario')
+    for a in T:
+        print(f'{a["num"]}\t{a["sa"]}\t{a["reajuste"]}\t{a["novo salario"]}')
+
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
@@ -144,3 +170,5 @@ match opcao:
     case 2: q02()
     case 3: q03()
     case 4: q04()
+    case 5: q05()
+    case 6: q06()
