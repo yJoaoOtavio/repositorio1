@@ -135,16 +135,29 @@ def q07():
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
 
 
-
-        
+     
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.
+def q09():  
+    lista1 = set()   
+    for x in range(10):
+     lista1.add (random.randrange(101))
+    print()
+    lista2 = set()    
+    for v in range(10):
+     lista2.add (random.randrange(101))  
+    print(f'lista1: {lista1}')
+    print(f'lista2: {lista2}')
+    print(f'intersecao das listas: {lista1 & lista2}')
+         
 
 #10. Faça um programa que leia uma lista com 10 elementos e obtenha outra lista resultado
 #cujos valores são os fatoriais da lista original.
 #Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+
+
 
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
@@ -203,3 +216,5 @@ match opcao:
     case 5: q05()
     case 6: q06()
     case 7: q07()
+    case 8: q08()
+    case 9: q09()
