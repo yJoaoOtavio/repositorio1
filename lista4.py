@@ -3,6 +3,19 @@ import random
 Lista de Exercícios referentes a coleções em python
 '''
 
+def exemploArquivo():
+    print('Dados já existentes no arquivo: ')
+    arquivo = open('dados.dat', 'r')
+    for linha in arquivo:
+        print(linha.strip())
+    arquivo.close()
+
+    arquivo = open('dados.dat','a')
+    for _ in range(3):
+        arquivo.write(input('Nome: ')+'\n')
+    arquivo.close()
+
+
 #1. Faça um programa que armazene 15 números inteiros em uma lista e depois
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
 #for encontrado o programa deve imprimir a posição desse número na lista, caso
@@ -133,7 +146,38 @@ def q07():
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
-
+def q08():
+    produtos = dict()
+    ultimo_codigo = 0
+    with open('produtos.dat','r') as arquivo:
+        for linha in arquivo:
+            campos = linha.split(';')
+            p = dict()
+            p['cod'] = int(campos[0])
+            p['nome'] = campos[1]
+            p['qtde'] = campos[2]
+            p['valor_compra'] = float(campos[3])
+            p['valor_venda'] = float(campos[4])
+            produtos[p['cod']] = p
+            ultimo_codigo = p['cod']
+    with open('produtos.dat','a') as arquivo:
+        while True:
+            p = dict()
+            p['cod'] = int(input(f'Cód({ultimo_codigo+1}): '))
+            if p['cod'] < 0:
+                break
+            ultimo_codigo = p['cod']
+            p['nome'] = input('Nome: ').upper()
+            p['qtde'] = int(input('Qtde: '))
+            p['valor_compra'] = float(input('Valor de Compra: R$ '))
+            p['valor_venda'] = float(input('Valor de Venda: R$ '))
+            produtos[p['cod']] = p
+            arquivo.write(f'{p["cod"]};{p["nome"]};{p["qtde"]};{p["valor_compra"]};{p["valor_venda"]}\n')
+    print('LISTA DE PRODUTOS:\n')
+    for p in produtos.values():
+        print(f'{p["cod"]}\t{p["nome"]}\t{p["qtde"]}\tR$ {p["valor_compra"]}\tR$ {p["valor_venda"]}')
+    codigo = int(input('Digite o cód a ser pesquisado: '))
+    print(f'{produtos[codigo]}')
 
      
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
@@ -161,6 +205,10 @@ def q09():
 
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+
+  
+
+
 
 #12. Crie um programa para gerenciar um sistema de reservas de mesas em uma casa
 #de espetáculo. A casa possui 30 mesas de 5 lugares cada. O programa deverá
@@ -218,3 +266,5 @@ match opcao:
     case 7: q07()
     case 8: q08()
     case 9: q09()
+    case 10: q10()
+    case 11: q11()
